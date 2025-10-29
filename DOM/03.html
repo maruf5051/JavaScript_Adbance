@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    // create a new div element
+    const div = document.createElement('div');
+    console.log(div);
+    div.className = 'container';
+    div.id = 'myId';
+    div.setAttribute('title', 'myTitle');
+    div.style.color = 'blue';
+    div.style.backgroundColor = 'green';
+    div.style.padding = '15px';
+    div.style.borderRadius = '5px';
+    div.innerText = 'Hello World';
+
+    document.body.appendChild(div);
+
+
+</script>
+
+</html>
