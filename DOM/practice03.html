@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="parent">
+        <li class="month">January</li>
+        <li class="month">February</li>
+        <li class="month">March</li>
+        <li class="month">April</li>
+    </div>
+</body>
+<script>
+    const parent = document.querySelector('.parent');
+    console.log(parent);
+    console.log(parent.children);
+    console.log(parent.children[2]);
+    const childTow = parent.children[1];
+    childTow.innerText = "New February";
+    childTow.style.backgroundColor = "yellow";
+    childTow.style.padding = "10px";
+    childTow.style.display = "inline-block";
+    childTow.style.borderRadius = "10px";
+    childTow.style.color = 'red';
+</script>
+
+</html>

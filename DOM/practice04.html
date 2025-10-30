@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul class="language">
+        <li>JavaScript</li>
+    </ul>
+</body>
+
+<script>
+    function addLanguage(langName) {
+        const li = document.createElement('li');
+        li.innerText = `${langName}`;
+
+        document.querySelector('.language').appendChild(li);
+    }
+    /*
+    add a new list item. When run function, it read all the list first to last and then add new item at the end.so, it take more time.
+    */
+    addLanguage('Python');
+    addLanguage('React');
+
+    // add new list item optimized way
+    function addLanguageOptimized(langName) {
+        const li = document.createElement('li');
+        li.appendChild(document.createTextNode(langName));
+
+        document.querySelector('.language').appendChild(li);
+    }
+    /*
+    add a new list item. When run function, it directly add new item at the end without reading all the list.so, it take less time.
+    */
+    addLanguageOptimized('NodeJS');
+
+    // Edit existing list item
+    const second_item = document.querySelector('li:nth-child(2)');
+    //console.log(second_item);
+    //second_item.innerHTML = 'Django'; // not optimized way
+    const new_list = document.createElement('li');
+    new_list.appendChild(document.createTextNode('Django'));
+    second_item.replaceWith(new_list); // optimized way
+
+    // Edit another way
+    const first_item = document.querySelector('li:first-child');
+    //console.log(first_item);
+    first_item.outerHTML = `<li>TypeScript</li>`; // not optimized way
+
+    // remove existing list item
+    const last_item = document.querySelector('li:last-child');
+    //console.log(last_item);
+    last_item.remove(); // optimized way
+</script>
+
+</html>

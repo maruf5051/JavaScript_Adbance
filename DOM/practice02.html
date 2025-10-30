@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+
+<body>
+
+</body>
+
+<script>
+    let div = document.createElement('div');
+    console.log(div);
+    div.className = 'my-div';
+    div.id = 'div1';
+    div.setAttribute('title', 'my-div-title');
+    div.innerText = 'Maruf SIkder';
+    div.style.backgroundColor = 'yellow';
+    div.style.color = 'red';
+    div.style.padding = '15px';
+    div.style.display = 'inline-block';
+    div.style.borderRadius = '10px';
+
+    document.body.appendChild(div);
+
+</script>
+
+</html>
